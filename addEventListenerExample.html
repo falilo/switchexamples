@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button id="myButton">Click me to see what happened </button>
+        <button id="otherButton"> Total </button>
+        <button id="firstButton"> I'm correct </button>
+        <button id="secondButton"> No, I'm the one who is correct </button>
+
+        <p id="argueParagraph"></p>
+    </body>
+    <script>
+        /* what is the syntax by addEeventlistener 
+        lick mouseover double click */
+
+        function displayAlert(){
+            alert("Hello World!!!!!!!!!");
+        }
+
+        function dontStepOnMe(){
+            alert("You are step on me")
+        }
+
+        function add(p1, p2){
+            alert(p1 + p2);
+        }
+
+        document.getElementById("myButton").addEventListener("click", displayAlert);
+
+        document.getElementById("myButton").addEventListener("click", dontStepOnMe);
+
+        /* Passing parameters with addEventListener*/
+
+        document.getElementById("otherButton").addEventListener("click", function(){
+            add(5, 4);
+        })
+
+        /* we are going to create two buttons that will argue each other */
+        function firstButtonClick(){
+            document.getElementById("argueParagraph").innerHTML = "I m correct";
+        }
+        document.getElementById("firstButton").addEventListener("click",firstButtonClick);
+
+
+        function secondButtonClick(){
+            document.getElementById("argueParagraph").innerHTML = "No, I'm the one who is correct"
+        }
+
+        document.getElementById("secondButton").addEventListener("click",secondButtonClick);
+    </script>
+
+</html>

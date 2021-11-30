@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaSript Examples</title>
+        
+    <script>
+        /* Js Function Example*/
+
+        function printName(){
+            console.log("Falilou Ouro Djobo");
+        }
+        /* function does nothing unlese it has been called*/
+        /* how to call the function*/
+        printName();
+        printName();
+
+        /* Fuction parameters and argument is a value provide to function
+        parameter during the funtion call*/
+
+        function displaySum(num1, num2){
+            let total= num1 + num2;
+            console.log(total);
+        }
+
+        displaySum(2, 8);
+        displaySum(890, 35647);
+        displaySum(999, -1);
+
+        /*Activities of class*/
+
+        function printProduct(num1, num2, num3){
+            let product = num1 * num2 * num3;
+            console.log(product);
+        }
+
+        printProduct(4, 5, 10);
+        printProduct(45, 56, 87);
+
+        /* Return Statement */
+
+        function findAverage(num1, num2){
+            let total = num1 + num2;
+            let avg = total / 2;
+
+            return avg;
+        }
+
+        let average = findAverage(8, 12);
+        console.log(average);
+
+        
+    </script>
+    </head> 
+    <body>
+        <p id="headtitle">INTRODUCTION OF JAVASCRIPT</p>
+        <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+        <p id="demo"></p>
+    </body>
+    <script>
+        let x = document.getElementById("headtitle").innerHTML;
+        console.log(x);
+
+        /* we can replace the HTML element on webpage by getElementById*/
+        document.getElementById("headtitle").innerHTML = "CUNY Leman College"
+
+        document.body.style.backgroundColor = "red";
+
+        /*using JavaScript to style the document*/
+        document.getElementById("headtitle").style.backgroundColor = "yellow";
+    </script>
+</html>

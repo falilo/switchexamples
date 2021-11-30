@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            #specialAd{
+                display: none;
+                border: solid red 5px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="specialAd">
+            <h1>Black Friday Special</h1>
+            <p>2 Iphone 13s for $10</p>
+        </div>
+
+        <img id="ball" src="basketball.jpg" height="80" width="80"
+        style="position:absolute;left:0">
+
+       
+
+    </body>
+
+    <script>
+        /* so far we ve seen event that are triggered by user 
+        however there are time used to execute code after some amount of the time
+        
+        The setTime*/
+        function showSpecialAdd(){
+            let special = document.getElementById("specialAd")
+            special.style.display = "block";
+        }
+
+        setTimeout(showSpecialAdd, 5000);
+
+        let ballImage;
+
+        let timerId;
+
+        function startMoving(){
+            ballImage = document.getElementById("ball");
+            timerId = setIntervall(moveBall, 10000);
+        }
+
+        function moveBall(){
+            let left = parseInt(ballImage.style.left);
+
+            ballImage.style.left = left + 5 + "px";
+            console.log(left);
+        }
+
+        startMoving();
+        
+    </script>
+</html>

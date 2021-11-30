@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>We are creating a simple calculator</title>
+    </head>
+
+    <body>
+        <!-- All content that are displayed in user is added
+         inside the body tag  -->
+
+        <form>
+            <!-- The form elt is container tag that esed for
+            collecting input from user-->
+
+            <p>Num1: <input type="number" id="num1"></p> 
+
+            <p>Num2: <input type="number" id="num2"></p> 
+
+            <p>Answer: <input type="number" id="answer"></p> 
+
+            <button id="submit">Calculate Answer</button>
+        </form>
+
+        <form>
+            <p>Num3: <input type="number" id="num3"></p> 
+
+            <p>Num4: <input type="number" id="num4"></p> 
+
+            <p>Answer2: <input type="number" id="answer2"></p> 
+
+            <button id="submit2">Calculate Answer</button>
+        </form>
+    </body>
+
+    <script>
+        function getAnswer(){
+            console.log("hello mouseover has occurred");
+
+            /*The following line is use to get a value*/
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+        
+            let total = num1 + num2;
+
+            document.getElementById("answer").value = total;
+        }
+
+        let submitButton = document.getElementById("submit");
+        submitButton.addEventListener("mouseover", getAnswer);
+
+
+        function getAnswer2(){
+            console.log("hello mouseover has occurred");
+
+            /*The following line is use to get a value*/
+            let num3 = document.getElementById("num3").value;
+            let num4 = document.getElementById("num4").value;
+        
+            let div = num3 / num4;
+
+            document.getElementById("answer2").value = div;
+
+        }
+
+        let submitButton2 = document.getElementById("submit2");
+        submitButton2.addEventListener("mouseover", getAnswer2);
+    </script>
+
+    <script>
+    </script>
+</html>
